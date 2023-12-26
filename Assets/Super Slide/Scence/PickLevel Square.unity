@@ -553,19 +553,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 153561271}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e5b88d4e971ef2429a7d224b74f2456, type: 3}
+  m_Script: {fileID: 11500000, guid: 046fbd8b12a91ad49972164b10f17a11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   levelPrefabs:
-  - {fileID: 3910169184897041288, guid: 8325e5d98e04fbf409f869f97be6dc28, type: 3}
-  - {fileID: 2031526237433260042, guid: cc4eca2d555f3404d9dcc3de768bf634, type: 3}
-  - {fileID: 2900889054681100414, guid: 615eba98fa7568c4e8f4bdf238788f95, type: 3}
-  - {fileID: 2900889054681100414, guid: 615eba98fa7568c4e8f4bdf238788f95, type: 3}
+  - {fileID: 8107201381964304317, guid: 48a46e55209ec2b49afad5d0f480ef86, type: 3}
+  - {fileID: 8612323366005358294, guid: 03eb4b29a29683f4e9d2f64b68d72a3a, type: 3}
+  - {fileID: 6365763760060538448, guid: a1419cc40f8240a4fa76831ffe74573d, type: 3}
+  - {fileID: 6365763760060538448, guid: a1419cc40f8240a4fa76831ffe74573d, type: 3}
   levelButtons:
   - {fileID: 749475118}
   - {fileID: 608313205}
   - {fileID: 1841288190}
-  - {fileID: 1841288190}
+  - {fileID: 1833419433}
 --- !u!1 &172296275
 GameObject:
   m_ObjectHideFlags: 0
@@ -885,7 +885,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -117, y: -113}
+  m_AnchoredPosition: {x: -113, y: -110}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &333759136
@@ -2086,7 +2086,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -334}
+  m_AnchoredPosition: {x: 0, y: -355}
   m_SizeDelta: {x: 800, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1049229621
@@ -2115,14 +2115,14 @@ MonoBehaviour:
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 234
+    m_MaxSize: 300
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Select level
+  m_Text: 'Select level '
 --- !u!222 &1049229622
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3279,7 +3279,7 @@ MonoBehaviour:
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 281
+    m_MaxSize: 180
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1

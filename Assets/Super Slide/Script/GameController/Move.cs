@@ -85,9 +85,16 @@ public class Move : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            AudioManager.instance.PlayWinSound();
             Debug.Log("Player va chạm vào: " + gameObject.name);
             Debug.Log("You Win!");
             PlayerManager.gameWin = true;
         }
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Rigidbody2D myRigidbody = GetComponent<Rigidbody2D>();
+        myRigidbody.Sleep();
+    }
+
 }

@@ -5,12 +5,12 @@ using UnityEngine;
 public class PlayerManager : MonoBehaviour
 {
     public static bool gameWin;
+    public GameObject setting;
     public GameObject GameWin;
     public GameObject pauseSetting;
     public GameObject[] levelPrefabs;
     private GameObject currentLevelPrefab;  
     private const string menuScene = "Menu";
-    private const string playScene = "Play";
     private const string pickLevelScene = "PickLevel";  
 
     private void Start()
@@ -18,7 +18,7 @@ public class PlayerManager : MonoBehaviour
         gameWin = false;
         Time.timeScale = 1;
         int selectedLevel = PlayerPrefs.GetInt("SelectedLevel", 0);
-        currentLevelPrefab = Instantiate(levelPrefabs[selectedLevel], new Vector2(-1.44f, 0f), Quaternion.identity);
+        currentLevelPrefab = Instantiate(levelPrefabs[selectedLevel], new Vector2(0f, 0f), Quaternion.identity);
     }
 
     private void UnlockNextLevel(int levelIndex)
@@ -33,7 +33,7 @@ public class PlayerManager : MonoBehaviour
 
         if (nextLevel < levelPrefabs.Length && PlayerPrefs.GetInt("Level" + nextLevel + "_Unlocked", 0) == 1)
         {
-            currentLevelPrefab = Instantiate(levelPrefabs[nextLevel], new Vector2(-1.44f, 0f), Quaternion.identity);
+            currentLevelPrefab = Instantiate(levelPrefabs[nextLevel], new Vector2(0f, 0f), Quaternion.identity);
         }
         else
         {
@@ -90,11 +90,16 @@ public class PlayerManager : MonoBehaviour
 
     public void RestartGame()
     {
+        if (setting != null)
+        {
+            setting.SetActive(false);
+        }
+        AudioManager.instance.PlayRestartSound();
         GameWin.SetActive(false);
         gameWin = false;
         Time.timeScale = 1;
         Destroy(currentLevelPrefab);
         int selectedLevel = PlayerPrefs.GetInt("SelectedLevel", 0);
-        currentLevelPrefab = Instantiate(levelPrefabs[selectedLevel], new Vector2(-1.44f, 0f), Quaternion.identity);
+        currentLevelPrefab = Instantiate(levelPrefabs[selectedLevel], new Vector2(0f, 0f), Quaternion.identity);
     }
 }
